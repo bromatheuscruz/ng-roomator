@@ -1,0 +1,43 @@
+<div class="container bg-info mt-5 h-100">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 col-md-4 mt-5">
+          <div class="form-group">
+            <label for="cow">COW</label>
+            <input id="cow" type="number" formControlName="cowValue" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 col-md-4 mt-5">
+          <div class="form-group">
+            <label for="chicken">CHICKEN</label>
+            <input id="chicken" type="number" formControlName="chickenValue" class="form-control">
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 col-md-4 mt-5">
+          <div class="form-group">
+            <label for="pig">PIG</label>
+            <input id="pig" type="number" formControlName="pigValue" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-dark">Check</button>
+    </div>
+  </form>
+  <div class="row align-items-center d-flex justify-content-center">
+    <div class="col-md-4 col-lg-4 col-sm-12 mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title text-center">Custom Current Value</h5>
+        </div>
+        <div class="card-body">
+          <h2 class="text-center">{{ customCurrentValue | number: '1.2-2'}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
